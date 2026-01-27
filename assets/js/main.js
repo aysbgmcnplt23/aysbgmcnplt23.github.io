@@ -38,6 +38,8 @@ const translations = {
         'project-housing-desc': 'Machine Learning algoritmaları ile konut fiyat tahmini yapan uygulama.',
         'project-dental': 'Akıllı Diş Kliniği Yönetim Sistemi',
         'project-dental-desc': 'Diş kliniklerine özel, web tabanlı yönetim ve takip sistemi.',
+        'project-todo': 'Flutter To-Do Uygulaması',
+        'project-todo-desc': 'Flutter ile geliştirilmiş, kullanıcı dostu görev takip ve yönetim uygulaması.',
         'project-grayscale': 'Görüntü İşleme: Gri Tonlama',
         'project-grayscale-desc': 'OpenCV kullanılarak gri tonlama ve negatif dönüşüm işlemleri.',
         'project-imageprocessing': 'İleri Seviye Görüntü İşleme',
@@ -94,6 +96,8 @@ const translations = {
         'project-housing-desc': 'Web app predicting housing prices using ML algorithms.',
         'project-dental': 'Smart Dental Clinic Management',
         'project-dental-desc': 'Web-based management system for dental clinics.',
+        'project-todo': 'Flutter To-Do App',
+        'project-todo-desc': 'A user-friendly task tracking and management app developed with Flutter.',
         'project-grayscale': 'Image Processing: Grayscale',
         'project-grayscale-desc': 'Grayscale and negative transformation using OpenCV.',
         'project-imageprocessing': 'Advanced Image Processing',
@@ -116,29 +120,34 @@ const translations = {
 // Project Images Configuration
 const projectImages = {
     ime: [
-        'https://i.hizliresim.com/ikq6q1x.png',
-        'https://i.hizliresim.com/c9n8jqd.png',
-        'https://i.hizliresim.com/4flwhva.png',
-        'https://i.hizliresim.com/b3kn7jc.png',
-        'https://i.hizliresim.com/elkxfwn.png',
-        'https://i.hizliresim.com/ipe5mv3.png',
-        'https://i.hizliresim.com/qz6k6ov.png'
+        'assets/images/projects/ime/ime-1.png',
+        'assets/images/projects/ime/ime-2.png',
+        'assets/images/projects/ime/ime-3.png',
+        'assets/images/projects/ime/ime-4.png',
+        'assets/images/projects/ime/ime-5.png'
     ],
     housing: [
-        'https://i.hizliresim.com/f1kpeej.jpeg',
-        'https://i.hizliresim.com/jdrigaw.png',
-        'https://i.hizliresim.com/g08ol6c.png',
-        'https://i.hizliresim.com/18p43ue.png',
-        'https://i.hizliresim.com/ff0uj13.png'
+        'assets/images/projects/housing/housing-1.png',
+        'assets/images/projects/housing/housing-2.png',
+        'assets/images/projects/housing/housing-3.png',
+        'assets/images/projects/housing/housing-4.png',
+        'assets/images/projects/housing/housing-5.png'
     ],
     dental: ['https://i.hizliresim.com/cbuycsf.png'],
-    grayscale: ['https://i.hizliresim.com/qq81e6y.png', 'https://i.hizliresim.com/ndurt9o.png'],
+    todo: [
+        'assets/images/projects/todo/todo-1.png',
+        'assets/images/projects/todo/todo-2.png',
+        'assets/images/projects/todo/todo-3.png'
+    ],
+    grayscale: [
+        'assets/images/projects/grayscale/grayscale-1.png',
+        'assets/images/projects/grayscale/grayscale-2.png'
+    ],
     imageprocessing: [
-        'https://i.hizliresim.com/9m40gra.png',
-        'https://i.hizliresim.com/aryayus.png',
-        'https://i.hizliresim.com/d02ex8z.png',
-        'https://i.hizliresim.com/8gku000.png',
-        'https://i.hizliresim.com/dok39y9.png'
+        'assets/images/projects/imageprocessing/img-1.png',
+        'assets/images/projects/imageprocessing/img-2.png',
+        'assets/images/projects/imageprocessing/img-3.png',
+        'assets/images/projects/imageprocessing/img-4.png'
     ]
 };
 
@@ -201,8 +210,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalImg = document.querySelector('.modal-content img');
     const modalIframe = document.querySelector('.modal-content iframe');
     const closeModal = document.querySelector('.close-modal');
+    const prevBtn = document.querySelector('.modal-prev');
+    const nextBtn = document.querySelector('.modal-next');
+
     let currentGallery = [];
     let currentIndex = 0;
+
+    function updateModalButtons() {
+        if (!prevBtn || !nextBtn) return;
+        if (currentGallery.length > 1 && modalImg.style.display !== 'none') {
+            prevBtn.style.display = 'block';
+            nextBtn.style.display = 'block';
+        } else {
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+        }
+    }
 
     function openModal(src, isPdf = false) {
         if (!modal) return;
@@ -223,6 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
+        updateModalButtons();
     }
 
     function closeModalHandler() {
@@ -233,6 +257,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (modalIframe) modalIframe.src = '';
             document.body.style.overflow = '';
         }, 300);
+    }
+
+    function showImage(index) {
+        if (currentGallery.length === 0) return;
+        currentIndex = (index + currentGallery.length) % currentGallery.length;
+        if (modalImg) modalImg.src = currentGallery[currentIndex];
     }
 
     // Project Gallery Logic
@@ -256,21 +286,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (isPdf || isImg) {
                 e.preventDefault();
+                currentGallery = []; // Clear gallery for single items
                 openModal(link.getAttribute('href'), isPdf);
             }
         });
     });
 
-    // Navigation inside modal (images only)
-    if (modalImg) {
-        modalImg.addEventListener('click', (e) => {
-            if (currentGallery.length > 1) {
-                e.stopPropagation();
-                currentIndex = (currentIndex + 1) % currentGallery.length;
-                modalImg.src = currentGallery[currentIndex];
-            }
+    // Button Navigation
+    if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showImage(currentIndex - 1);
         });
     }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showImage(currentIndex + 1);
+        });
+    }
+
+    // Keyboard Navigation
+    window.addEventListener('keydown', (e) => {
+        if (!modal.classList.contains('active')) return;
+        if (e.key === 'Escape') closeModalHandler();
+        if (modalImg.style.display !== 'none' && currentGallery.length > 1) {
+            if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+            if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+        }
+    });
 
     if (closeModal) {
         closeModal.addEventListener('click', closeModalHandler);

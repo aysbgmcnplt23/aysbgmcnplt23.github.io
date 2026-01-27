@@ -637,6 +637,7 @@ nav {
     background: white;
 }
 
+
 .close-modal {
     position: absolute;
     top: -40px;
@@ -644,6 +645,38 @@ nav {
     color: white;
     font-size: 2rem;
     cursor: pointer;
+    z-index: 2001;
+}
+
+.modal-prev,
+.modal-next {
+    position: absolute;
+    bottom: 50%;
+    /* Center vertically or button based on request? User asked for "alt sağ ve sol" which usually means bottom left/right. But for galleries center is standard. Let's do bottom as requested. */
+    bottom: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    user-select: none;
+    z-index: 10;
+}
+
+.modal-prev:hover,
+.modal-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-prev {
+    left: 20px;
+}
+
+.modal-next {
+    right: 20px;
 }
 
 /* Animations */
