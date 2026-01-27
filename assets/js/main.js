@@ -196,17 +196,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Modal Logic for Projects
+    // Modal Logic for Projects & Certificates
     const modal = document.querySelector('.modal');
     const modalImg = document.querySelector('.modal-content img');
+    const modalIframe = document.querySelector('.modal-content iframe');
     const closeModal = document.querySelector('.close-modal');
     let currentGallery = [];
     let currentIndex = 0;
 
-    function openModal(imgSrc) {
-        if (!modalImg) return;
-        modalImg.src = imgSrc;
+    function openModal(src, isPdf = false) {
+        if (!modal) return;
+
+        if (isPdf) {
+            if (modalImg) modalImg.style.display = 'none';
+            if (modalIframe) {
+                modalIframe.style.display = 'block';
+                modalIframe.src = src;
+            }
+        } else {
+            if (modalIframe) modalIframe.style.display = 'none';
+            if (modalImg) {
+                modalImg.style.display = 'block';
+                modalImg.src = src;
+            }
+        }
+
         modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModalHandler() {
+        if (!modal) return;
+        modal.classList.remove('active');
+        setTimeout(() => {
+            if (modalImg) modalImg.src = '';
+            if (modalIframe) modalIframe.src = '';
+            document.body.style.overflow = '';
+        }, 300);
     }
 
     // Project Gallery Logic
@@ -216,15 +242,30 @@ document.addEventListener('DOMContentLoaded', () => {
             if (projectImages[id]) {
                 currentGallery = projectImages[id];
                 currentIndex = 0;
-                openModal(currentGallery[0]);
+                openModal(currentGallery[0], false);
             }
         });
     });
 
-    // Navigation inside modal (simple click to next)
+    // Certificate Logic
+    document.querySelectorAll('.cert-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href').toLowerCase();
+            const isPdf = href.endsWith('.pdf');
+            const isImg = href.endsWith('.jpg') || href.endsWith('.jpeg') || href.endsWith('.png');
+
+            if (isPdf || isImg) {
+                e.preventDefault();
+                openModal(link.getAttribute('href'), isPdf);
+            }
+        });
+    });
+
+    // Navigation inside modal (images only)
     if (modalImg) {
-        modalImg.addEventListener('click', () => {
+        modalImg.addEventListener('click', (e) => {
             if (currentGallery.length > 1) {
+                e.stopPropagation();
                 currentIndex = (currentIndex + 1) % currentGallery.length;
                 modalImg.src = currentGallery[currentIndex];
             }
@@ -232,22 +273,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (closeModal) {
-        closeModal.addEventListener('click', () => {
-            modal.classList.remove('active');
-        });
+        closeModal.addEventListener('click', closeModalHandler);
     }
 
     if (modal) {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
-                modal.classList.remove('active');
+                closeModalHandler();
             }
         });
     }
 
     // Close on Escape
     window.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal) modal.classList.remove('active');
+        if (e.key === 'Escape') closeModalHandler();
     });
 
     // Smooth Scroll & Active Link
