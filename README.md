@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayşe Begüm Canpolat - Yazılım Mühendisi</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Ayşe Begüm</a>
+                <div class="nav-links">
+                    <a href="#hero" data-translate="nav-home" class="active">Ana Sayfa</a>
+                    <a href="#about" data-translate="nav-about">Hakkımda</a>
+                    <a href="#education" data-translate="nav-education">Eğitim</a>
+                    <a href="#experience" data-translate="nav-experience">Deneyim</a>
+                    <a href="#projects" data-translate="nav-projects">Projeler</a>
+                    <a href="#certificates" data-translate="nav-certificates">Sertifikalar</a>
+                    <a href="#contact" data-translate="nav-contact">İletişim</a>
+                </div>
+                <div class="controls">
+                    <button class="lang-btn active" data-lang="tr">TR</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <div class="hamburger">☰</div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text hidden">
+                <h1 data-translate="hero-title">Merhaba, ben <span class="highlight">Ayşe Begüm Canpolat</span></h1>
+                <p class="subtitle" data-translate="hero-subtitle">Yazılım Mühendisi</p>
+                <p class="description" data-translate="about-text-4">Kariyerimi bir adım ileriye taşımak için yapay
+                    zeka, makine öğrenmesi ve uygulama geliştirme alanlarında kendimi geliştirmeye devam ediyorum.</p>
+                <a href="#projects" class="btn" data-translate="hero-btn">Projelerimi Gör</a>
+            </div>
+            <div class="hero-image hidden">
+                <img src="assets/images/profile.jpg" alt="Ayşe Begüm Canpolat" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-translate="about-title">Hakkımda</h2>
+            <div class="about-content hidden">
+                <div class="about-text">
+                    <p data-translate="about-text-1">Ben, Yazılım Mühendisliği 4. sınıf öğrencisiyim.</p>
+                    <p data-translate="about-text-2">Eğitim hayatım boyunca farklı projelerde aktif roller üstlenerek
+                        yazılım geliştirme süreçlerinde değerli deneyimler kazandım.</p>
+                    <p data-translate="about-text-3">Özellikle web geliştirme alanında uzmanlaşmaya odaklandım; bu
+                        doğrultuda staj deneyimleri edindim, projeler hayata geçirdim.</p>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <h4 data-translate="about-highlight-edu">Eğitim</h4>
+                        <p data-translate="about-highlight-edu-text">Konya Teknik Üniversitesi - Yazılım Mühendisliği
+                        </p>
+                    </div>
+                    <div class="highlight-card">
+                        <h4 data-translate="about-highlight-focus">Odak Noktası</h4>
+                        <p data-translate="about-highlight-focus-text">Web Geliştirme, Yapay Zeka, UI/UX</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h4 data-translate="about-highlight-contact">İletişim</h4>
+                        <p>aysebegumcanpolat@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-container hidden">
+                <h3 data-translate="skills-title">Yetenekler</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">🌐</div>
+                        <h4 data-translate="about-skill-web">Web Geliştirme</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">💻</div>
+                        <h4 data-translate="about-skill-lang">Yazılım Dilleri</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">C</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🤖</div>
+                        <h4 data-translate="about-skill-ai">Yapay Zeka</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">NLP</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🛠️</div>
+                        <h4 data-translate="about-skill-tools">Araçlar & Veritabanı</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Kubernates</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title" data-translate="education-title">Eğitim</h2>
+            <div class="timeline hidden">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date" data-translate="education-software-date">2022 - 2026</span>
+                        <h3 data-translate="education-software">Yazılım Mühendisliği — (Lisans)</h3>
+                        <h4 data-translate="education-software-school">Konya Teknik Üniversitesi</h4>
+                        <p><a href="assets/images/onur.jpeg" target="_blank"
+                                style="color: var(--primary-color); font-weight: 600;">Yüksek Onur Belgesi</a></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date" data-translate="education-business-date">2025 - 2029</span>
+                        <h3 data-translate="education-business">İşletme — (Lisans)</h3>
+                        <h4 data-translate="education-business-school">Anadolu Üniversitesi</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title" data-translate="experience-title">Deneyim</h2>
+            <div class="timeline hidden">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date" data-translate="experience-aktif-date">Şubat 2026 - Mayıs
+                            2026</span>
+                        <h3 data-translate="experience-aktif-title">Stajyer Yazılım Mühendisi — AKTİF BANK</h3>
+                        <p data-translate="experience-aktif-desc">Yazılım geliştirme ve sistem entegrasyonu projelerinde
+                            aktif görev.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date" data-translate="experience-zorlu-date">Temmuz 2025 - Ağustos
+                            2025</span>
+                        <h3 data-translate="experience-zorlu-title">Stajyer Yazılım Mühendisi — ZORLU HOLDİNG</h3>
+                        <p data-translate="experience-zorlu-desc">React eğitimi ardından Frontend ekibi ile iş birliği
+                            içinde kullanıcı arayüzü iyileştirmeleri.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date" data-translate="experience-firat-date">Temmuz 2024 - Eylül
+                            2024</span>
+                        <h3 data-translate="experience-firat-title">Stajyer Yazılım Mühendisi — FIRAT ÜNİVERSİTESİ</h3>
+                        <p data-translate="experience-firat-desc">Web eğitimi ve web sitesi geliştirme deneyimleri.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date" data-translate="experience-nasa-date">Ekim 2024 / Ekim 2025</span>
+                        <h3 data-translate="experience-nasa-title">Mentör — NASA SPACE APPS CHALLENGE</h3>
+                        <p data-translate="experience-nasa-desc">NASA Space Apps Hackathon'unda mentörlük.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-translate="projects-title">Projelerim</h2>
+            <div class="projects-grid hidden">
+                <article class="project-card" data-project-id="ime">
+                    <div class="project-content">
+                        <h3 data-translate="project-ime">IME Otomasyon Sistemi</h3>
+                        <p data-translate="project-ime-desc">Konya Teknik Üniversitesi için geliştirilen İME süreci web
+                            otomasyonu.</p>
+                    </div>
+                </article>
+                <article class="project-card" data-project-id="housing">
+                    <div class="project-content">
+                        <h3 data-translate="project-housing">Ev Fiyat Tahmini Projesi</h3>
+                        <p data-translate="project-housing-desc">Machine Learning algoritmaları ile konut fiyat tahmini
+                            yapan web uygulaması.</p>
+                    </div>
+                </article>
+                <article class="project-card" data-project-id="dental">
+                    <div class="project-content">
+                        <h3 data-translate="project-dental">Akıllı Diş Kliniği Yönetim Sistemi</h3>
+                        <p data-translate="project-dental-desc">Diş kliniklerine özel hasta ve randevu yönetim sistemi.
+                        </p>
+                    </div>
+                </article>
+                <article class="project-card" data-project-id="grayscale">
+                    <div class="project-content">
+                        <h3 data-translate="project-grayscale">Gri Tonlama ve Negatif Görüntü</h3>
+                        <p data-translate="project-grayscale-desc">OpenCV ile görüntü işleme teknikleri.</p>
+                    </div>
+                </article>
+                <article class="project-card" data-project-id="imageprocessing">
+                    <div class="project-content">
+                        <h3 data-translate="project-imageprocessing">İleri Seviye Görüntü İşleme</h3>
+                        <p data-translate="project-imageprocessing-desc">Görüntü boyutlandırma, zoom ve Hough dönüşümü
+                            uygulamaları.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2 class="section-title" data-translate="certificates-title">Sertifikalarım</h2>
+            <ul class="cert-list hidden">
+                <li class="cert-item">
+                    <a href="assets/certificates/Ayşe Begüm Canpolat - Doğal Dil İşleme.pdf" target="_blank"
+                        class="cert-link">
+                        <span class="cert-title">Doğal Dil İşleme - Turkcell</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/Ayşe Begüm Canpolat-Dijital Okuryazarlık101.pdf" target="_blank"
+                        class="cert-link">
+                        <span class="cert-title">Dijital Okuryazarlık 101</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/Ayşe Begüm Canpolat-Dijital Okuryazarlık201.pdf" target="_blank"
+                        class="cert-link">
+                        <span class="cert-title">Dijital Okuryazarlık 201</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/Ayşe Begüm Canpolat-Dijital Okuryazarlık301.pdf" target="_blank"
+                        class="cert-link">
+                        <span class="cert-title">Dijital Okuryazarlık 301</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/Ayşe Begüm Canpolat-Dijital Okuryazarlık401.pdf" target="_blank"
+                        class="cert-link">
+                        <span class="cert-title">Dijital Okuryazarlık 401</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/Ayşe Begüm Canpolat-Java101.pdf" target="_blank" class="cert-link">
+                        <span class="cert-title">Java 101</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/Ayşe Begüm Canpolat-Web Programlama101.pdf" target="_blank"
+                        class="cert-link">
+                        <span class="cert-title">Web Programlama 101 (HTML)</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/Ayşe Begüm Canpolat-Web Programlama201.pdf" target="_blank"
+                        class="cert-link">
+                        <span class="cert-title">Web Programlama 201 (HTML5 & CSS)</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/Ayşe Begüm Canpolat-Web Programlama301.pdf" target="_blank"
+                        class="cert-link">
+                        <span class="cert-title">Web Programlama 301 (JavaScript)</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/Bilgi_Güvenliği_Bilgeiş_405196.pdf" target="_blank" class="cert-link">
+                        <span class="cert-title">Bilgi Güvenliği - Bilgeİş</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/C programlama - Udemy.pdf" target="_blank" class="cert-link">
+                        <span class="cert-title">C Programlama - Udemy</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/C# Temel Bilgiler ve Uygulamalı Eğitim Kursu.pdf" target="_blank"
+                        class="cert-link">
+                        <span class="cert-title">C# Temel Bilgiler - Udemy</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/CSS-Sertifika_403729_Bilgeiş.pdf" target="_blank" class="cert-link">
+                        <span class="cert-title">CSS Eğitimi - Bilgeİş</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/HTML-Sertifika_Bilgeiş_403728.pdf" target="_blank" class="cert-link">
+                        <span class="cert-title">HTML Eğitimi - Bilgeİş</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/Herkes_için_Yapay_Zeka_I-Sertifika_Bilgeiş_415054.pdf" target="_blank"
+                        class="cert-link">
+                        <span class="cert-title">Herkes için Yapay Zeka I - Bilgeİş</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/Javascript-Sertifika_Bilgeiş_405195.pdf" target="_blank"
+                        class="cert-link">
+                        <span class="cert-title">JavaScript Eğitimi - Bilgeİş</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/Python_Programlama_Bilgeiş_405691.pdf" target="_blank"
+                        class="cert-link">
+                        <span class="cert-title">Python Programlama 1 - Bilgeİş</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/Python_Programlama2_Bilgeiş_Sertifika_406423.pdf" target="_blank"
+                        class="cert-link">
+                        <span class="cert-title">Python Programlama 2 - Bilgeİş</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/Sosyal_Medya_Bilgeiş-Sertifika_405197.pdf" target="_blank"
+                        class="cert-link">
+                        <span class="cert-title">Sosyal Medya Uzmanlığı - Bilgeİş</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/The Front-End Web Developer Bootcamp CSS,JS&React.pdf" target="_blank"
+                        class="cert-link">
+                        <span class="cert-title">Front-End Developer Bootcamp - Udemy</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/firat-universitesi-sertifika-mobil uygulama.pdf" target="_blank"
+                        class="cert-link">
+                        <span class="cert-title">Mobil Uygulama Geliştirme - Fırat Üni.</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+                <li class="cert-item">
+                    <a href="assets/certificates/Çekirdekten uzmanlığa egzersiz ve projelerle komple java -udemy.pdf"
+                        target="_blank" class="cert-link">
+                        <span class="cert-title">Komple Java Eğitimi - Udemy</span>
+                        <span class="cert-icon">📄</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-translate="contact-title">İletişim</h2>
+            <div class="contact-container hidden">
+                <a href="mailto:aysebegumcanpolat@gmail.com" class="contact-item">
+                    <span>✉ aysebegumcanpolat@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/a-beg%C3%BCm-canpolat/" target="_blank" class="contact-item">
+                    <span>Linked In</span>
+                </a>
+                <a href="https://github.com/aysbgmcnplt23" target="_blank" class="contact-item">
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p data-translate="footer-text">&copy; 2025 Ayşe Begüm Canpolat - Tüm hakları saklıdır.</p>
+    </footer>
+
+    <!-- Modal for Images -->
+    <div class="modal">
+        <span class="close-modal">×</span>
+        <div class="modal-content">
+            <img src="" alt="Preview">
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
