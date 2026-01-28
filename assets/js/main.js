@@ -139,7 +139,8 @@ const projectImages = {
     todo: [
         'assets/images/projects/todo/todo-1.png',
         'assets/images/projects/todo/todo-2.png',
-        'assets/images/projects/todo/todo-3.png'
+        'assets/images/projects/todo/todo-3.png',
+        'assets/images/projects/todo/todo-4.png'
     ],
     grayscale: [
         'assets/images/projects/grayscale/grayscale-1.png',
