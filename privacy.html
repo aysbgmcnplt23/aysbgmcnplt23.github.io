@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gizlilik Politikası | Ayşe Begüm Canpolat</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .privacy-page {
+            padding: 120px 0 60px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .privacy-content {
+            background: var(--bg-color);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        h2 {
+            margin: 25px 0 15px;
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: var(--text-color);
+            opacity: 0.9;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container privacy-page">
+        <a href="index.html" class="back-btn">← Ana Sayfaya Dön</a>
+        <div class="privacy-content">
+            <h1>Gizlilik Politikası</h1>
+            <p>Son güncelleme: 28 Ocak 2026</p>
+
+            <p>Bu platform, Ayşe Begüm Canpolat'ın (Yazılım Mühendisi) kişisel portfolyo sitesidir. Bu gizlilik
+                politikası, sitemizi ziyaret eden kullanıcıların bilgilerinin nasıl (veya nasıl olmadığını) ele
+                alındığını açıklar.</p>
+
+            <h2>1. Kişisel Verilerin Toplanması</h2>
+            <p>Bu web sitesi, ziyaretçilerinden doğrudan herhangi bir kişisel veri (isim, e-posta, telefon vb.)
+                toplamaz. İletişim bölümünde yer alan bağlantılar (LinkedIn, GitHub, E-posta), sizi ilgili platformlara
+                yönlendirir ve o platformların kendi gizlilik politikaları geçerlidir.</p>
+
+            <h2>2. Çerezler (Cookies)</h2>
+            <p>Sitemiz, yalnızca tercih ettiğiniz dil seçeneğini (Türkçe/İngilizce) tarayıcınızda saklamak için yerel
+                depolama (Local Storage) kullanır. Üçüncü taraf reklam veya takip çerezleri kullanılmamaktadır.</p>
+
+            <h2>3. Sitenin Amacı</h2>
+            <p>Bu site tamamen akademik ve profesyonel bir portfolyo amacı taşımaktadır. Herhangi bir ticari etkileşim,
+                üyelik sistemi veya sosyal tanışma/dating özelliği barındırmamaktadır.</p>
+
+            <h2>4. İletişim</h2>
+            <p>Gizlilik politikamız hakkında sorularınız varsa, LinkedIn profilim üzerinden benimle iletişime
+                geçebilirsiniz.</p>
+        </div>
+    </div>
+
+    <script>
+        // Dark mode support from local storage if applicable
+        const savedLang = localStorage.getItem('preferredLanguage') || 'tr';
+        document.documentElement.lang = savedLang;
+    </script>
+</body>
+
+</html>
