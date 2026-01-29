@@ -208,6 +208,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Close mobile menu when a nav link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                hamburger.textContent = '☰';
+            }
+        });
+    });
+
     // Modal Logic for Projects & Certificates
     const modal = document.querySelector('.modal');
     const modalImg = document.querySelector('.modal-content img');
