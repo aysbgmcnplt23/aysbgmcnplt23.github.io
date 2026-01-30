@@ -57,6 +57,7 @@ const translations = {
         'experience-firat-desc': 'Web geliştirme ve dijital dönüşüm projeleri.',
         'experience-nasa-title': 'Mentör — NASA SPACE APPS',
         'experience-nasa-desc': 'NASA Space Apps Challenge hackathon mentörlüğü.',
+        'education-honor-1': 'Yüksek Onur Belgesi 1',
     },
     en: {
         'nav-home': 'Home',
@@ -116,6 +117,7 @@ const translations = {
         'experience-firat-desc': 'Web development and digital transformation.',
         'experience-nasa-title': 'Mentor — NASA SPACE APPS',
         'experience-nasa-desc': 'Mentoring at NASA Space Apps Challenge.',
+        'education-honor-1': 'High Honor Certificate 1',
     }
 };
 
@@ -186,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Intersection Observer for Animations
+    // Intersection Observer for Animations hamburger menu 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
