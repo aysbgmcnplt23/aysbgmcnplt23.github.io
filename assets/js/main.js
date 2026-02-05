@@ -50,14 +50,15 @@ const translations = {
         'education-business': 'İşletme - (Lisans)',
         'education-business-school': 'Anadolu Üniversitesi',
         'experience-aktif-title': 'Stajyer Yazılım Mühendisi — AKTİF BANK',
-        'experience-aktif-desc': 'Aktif Bank bünyesinde yazılım geliştirme ve entegrasyon süreçleri.',
+        'experience-aktif-desc': 'Aktif Bank’ın şubesiz bankacılık platformu N Kolay kapsamında uygulama geliştirme süreçlerine katılarak yazılım geliştirme ve sistem entegrasyonu çalışmalarında yer alıyorum.',
         'experience-zorlu-title': 'Stajyer Yazılım Mühendisi — ZORLU HOLDİNG',
-        'experience-zorlu-desc': 'Kullanıcı arayüzü iyileştirmeleri ve React geliştirme.',
-        'experience-firat-title': 'Stajyer Yazılım Mühendisi — FIRAT ÜNİVERSİTESİ',
-        'experience-firat-desc': 'Web geliştirme ve dijital dönüşüm projeleri.',
+        'experience-zorlu-desc': 'Zorlu Holding’de kullanıcı arayüzü iyileştirmeleri ve React tabanlı uygulama geliştirme projelerinde yer aldım.',
+        'experience-firat-title': 'Stajyer Yazılım Mühendisi — FIRAT ÜNİVERSİTESİ DİJİTAL DÖNÜŞÜM VE YAZILIM OFİSİ',
+        'experience-firat-desc': 'Fırat Üniversitesi’nde dijital dönüşüm projelerinde yer alarak, web geliştirme ve sistem güncellemeleri üzerine çalıştım.',
         'experience-nasa-title': 'Mentör — NASA SPACE APPS',
         'experience-nasa-desc': 'NASA Space Apps Challenge hackathon mentörlüğü.',
         'education-honor-1': 'Yüksek Onur Belgesi 1',
+        'experience-nasa-cert': 'Galactic Local Mentor Belgesi',
     },
     en: {
         'nav-home': 'Home',
@@ -110,14 +111,15 @@ const translations = {
         'education-business': 'Business Administration - (Bachelor\'s)',
         'education-business-school': 'Anadolu University',
         'experience-aktif-title': 'Software Engineer Intern — AKTİF BANK',
-        'experience-aktif-desc': 'Software development and integration at Aktif Bank.',
+        'experience-aktif-desc': 'Participating in application development processes, software development, and system integration within Aktif Bank\'s branchless banking platform, N Kolay.',
         'experience-zorlu-title': 'Software Engineer Intern — ZORLU HOLDING',
-        'experience-zorlu-desc': 'UI improvements and React development.',
-        'experience-firat-title': 'Software Engineer Intern — FIRAT UNIVERSITY',
-        'experience-firat-desc': 'Web development and digital transformation.',
+        'experience-zorlu-desc': 'Participated in user interface improvements and React-based application development projects at Zorlu Holding.',
+        'experience-firat-title': 'Software Engineer Intern — FIRAT UNIVERSITY DIGITAL TRANSFORMATION AND SOFTWARE OFFICE',
+        'experience-firat-desc': 'Worked on web development and system updates by participating in digital transformation projects at Fırat University.',
         'experience-nasa-title': 'Mentor — NASA SPACE APPS',
         'experience-nasa-desc': 'Mentoring at NASA Space Apps Challenge.',
         'education-honor-1': 'High Honor Certificate 1',
+        'experience-nasa-cert': 'Galactic Local Mentor Certificate',
     }
 };
 
@@ -137,7 +139,12 @@ const projectImages = {
         'assets/images/projects/housing/housing-4.png',
         'assets/images/projects/housing/housing-5.png'
     ],
-    dental: ['https://i.hizliresim.com/cbuycsf.png'],
+    dental: [
+        'assets/images/projects/dental/dental-0.png',
+        'assets/images/projects/dental/dental-1.png',
+        'assets/images/projects/dental/dental-2.png',
+        'assets/images/projects/dental/dental-3.png'
+    ],
     todo: [
         'assets/images/projects/todo/todo-1.png',
         'assets/images/projects/todo/todo-2.png',
